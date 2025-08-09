@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog de Asia Oriental</title>
+  <style>
+    :root {
+      --color-primario: #ff4d4d;
+      --color-fondo: #ffffff;
+      --color-texto: #333;
+      --color-hover: #ffe5e5;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Century Gothic', sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: var(--color-primario);
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    main {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      overflow: hidden;
+      animation: aparecer 0.8s ease forwards;
+      opacity: 0;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      background-color: var(--color-hover);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.03);
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h2 {
+      font-size: 20px;
+      margin: 0 0 10px;
+      color: var(--color-primario);
+    }
+
+    .card-content p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
+    section {
+      padding-top: 80px;
+    }
+
+    @keyframes aparecer {
+      0% {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌏 Blog de Asia Oriental</h1>
+    <p>Japón, China y Corea del Sur</p>
+    <nav>
+      <a href="#cultura">Cultura</a>
+      <a href="#tecnologia">Tecnología</a>
+    </nav>
+  </header>
+
+  <!-- Sección Cultura -->
+  <section id="cultura">
+    <main>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?japan,temple" alt="Templo japonés">
+        <div class="card-content">
+          <h2>Japón: Templos y Tradición</h2>
+          <p>Japón combina templos históricos con costumbres tradicionales como el té y los kimonos.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?china,culture" alt="Cultura China">
+        <div class="card-content">
+          <h2>China: Patrimonio Milenario</h2>
+          <p>La ópera china, el idioma mandarín y festivales como el Año Nuevo Lunar reflejan su rica cultura.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?korea,culture" alt="Cultura coreana">
+        <div class="card-content">
+          <h2>Corea: Tradición y K-pop</h2>
+          <p>Desde el hanbok y los templos hasta el K-pop y K-dramas, Corea del Sur vive entre dos mundos.</p>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <!-- Sección Tecnología -->
+  <section id="tecnologia">
+    <main>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?tokyo,technology" alt="Tecnología japonesa">
+        <div class="card-content">
+          <h2>Japón: Robótica y Futuro</h2>
+          <p>Tokio lidera con trenes bala, inteligencia artificial y robótica avanzada.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?china,tech" alt="Tecnología china">
+        <div class="card-content">
+          <h2>China: Potencia Digital</h2>
+          <p>China está revolucionando el mundo con Huawei, 5G, pagos móviles y autos eléctricos.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?korea,tech" alt="Tecnología coreana">
+        <div class="card-content">
+          <h2>Corea: Innovación y Diseño</h2>
+          <p>Samsung, LG y la conectividad 6G ponen a Corea del Sur como líder en innovación global.</p>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <footer>
+    © 2025 Blog de Asia Oriental | Hecho con 💖 por TuNombre
+  </footer>
+
+</body>
+</html>
+
+<!-- Solo muestro una tarjeta como ejemplo. Aplica igual para todas -->
+<div class="card">
+  <a href="pintest creada.html" style="text-decoration: none; color: inherit;">
+    <img src="https://source.unsplash.com/400x300/?japan,temple" alt="Templo japonés">
+    <div class="card-content">
+      <h2>Japón: Templos y Tradición</h2>
+      <p>Japón combina templos históricos con costumbres tradicionales como el té y los kimonos.</p>
+    </div>
+  </a>
+</div>
